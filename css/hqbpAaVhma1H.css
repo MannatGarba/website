@@ -1,0 +1,336 @@
+/* Inspiration + CSS "intro" credits: bones.sesh.team */
+/* Sources used list:
+    - spinbot.pw (video tag, #center),
+    - http://static.tumblr.com/zlim8hm/29yn6561z/force-cursor.png (cursor),
+    - https://github.com/tsenart/sight/blob/master/fonts/Consolas.ttf (font),
+    - https://emerald.gg/images/k8qqUshNipiT.png (2x2 dot, inspiration and pattern CSS)
+*/
+
+html {
+  cursor: url('../images/QlkU8XwLCpTH.png'), default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+a {
+  color: #e4e3e3;
+  text-decoration: none;
+}
+
+body,
+input {
+  color: #e4e3e3;
+  background-color: #000;
+}
+
+@font-face {
+  font-family: courier_regular;
+  src: url('../others/Consolas.ttf');
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: consolas, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+input {
+  outline: 0;
+  border: none;
+}
+
+td {
+  padding: 3px;
+}
+
+hr {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-style: dashed;
+}
+
+pre {
+  font-size: 1.15em;
+}
+
+.box,
+body,
+input {
+  background-color: #000;
+}
+
+.box {
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.top-right {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* This will ensure it's centered perfectly */
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4); /* White color with 70% transparency */
+  padding: 30px; /* Adjust padding */
+  padding-bottom: 15px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Width will take 90% of the screen on all devices */
+  max-width: 450px; /* Max width to avoid overly large containers on bigger screens */
+  margin: 0;
+}
+
+#brand {
+  margin-left: 0.65pc;
+}
+
+.marquee-container {
+  position: absolute;
+  width: 100%;
+  bottom: 10%;
+  text-align: center;
+}
+
+#marquee {
+  width: 420px;
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: -4.5px;
+  font-size: 15px;
+}
+
+.emoticon {
+  vertical-align: middle;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -3;
+}
+
+.social-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-links ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-links ul li a {
+  text-decoration: none;
+  color: #e4e3e3; /* Match your theme */
+  font-size: 14px;
+}
+
+.social-links ul li a img {
+  width: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+#pattern {
+  background: transparent url('../images/k8qqUshNipiT.png') repeat 0 0;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+  opacity: 1;
+}
+
+#pattern,
+#background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#background {
+  z-index: -2;
+  position: fixed;
+  top: 0; /* Align the video to the top */
+  left: 0; /* Align the video to the left */
+  width: 100%; /* Make the video take up the full width of the screen */
+  height: 100%; /* Make the video take up the full height of the screen */
+  object-fit: cover; /* Ensure the video covers the entire screen while maintaining its aspect ratio */
+  background-size: cover; /* This is optional but will ensure the background also covers the screen */
+  overflow: hidden;
+  /* -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px); */
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+}
+
+/* .trollface-light {
+  -webkit-filter: invert(100%);
+  -moz-filter: invert(100%);
+  -ms-filter: invert(100%);
+} */
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.links .link {
+  display: block;
+  outline: 0;
+  cursor: pointer;
+  border: 2px solid #333;
+  color: #333;
+  background: rgba(255, 255, 255, 0.4);;
+  
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 8px;
+  transition-duration: 0.15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.links .link:hover {
+  background-color: rgb(193, 31, 31);
+}
+
+.links .link img {
+  width: 20px; /* Set to a smaller value */
+  height: 20px; /* Ensure height matches width for a consistent size */
+  vertical-align: middle; /* Keeps the icons aligned with the text */
+  margin-right: 5px; /* Optional: Adjust spacing between icon and text */
+}
+
+.rounded-logo {
+  width: 200px; /* Adjust the size of the logo */
+  height: 200px; /* Adjust the size of the logo */
+  margin-right: 0px; /* Adjust space between logo and text */
+  vertical-align: middle; /* Align the logo with the text */
+  
+}
+
+
+
+.links .link {
+  padding: 8px;
+  margin: 15px 10%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    padding: 30px;
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+    max-width: 80%;
+  }
+
+  #marquee {
+    font-size: 14px;
+  }
+
+  .social-links ul li {
+    margin: 0 5px;
+  }
+
+  .social-links ul li a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+    max-width: 80%;
+  }
+
+  #marquee {
+    font-size: 12px;
+  }
+
+  .links .link {
+    font-size: 16px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 10px;
+    max-width: 80%;
+  }
+
+  #marquee {
+    font-size: 10px;
+  }
+
+  .links .link {
+    font-size: 14px;
+    padding: 5px;
+  }
+}
+
+
+.mute-unmute-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mute-unmute-btn:hover {
+  background-color: #555;
+}
