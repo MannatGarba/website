@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #000;
+    }
+    img {
+      width: 100%; /* Default: 100% width for small screens */
+      height: auto; /* Maintain aspect ratio */
+      display: block;
+    }
+
+    /* Media query for laptops and larger screens */
+    @media (min-width: 768px) {
+      img {
+        width: 500px;  /* Fixed width for laptops and larger screens */
+        height: 500px; /* Fixed height */
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="../images/upcoming-soon.jpg" alt="event" />
+</body>
+</html>
